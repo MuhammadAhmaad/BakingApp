@@ -201,8 +201,14 @@ public class StepDetailFragment extends Fragment {
     public void onPause() {
         super.onPause();
         position = player.getCurrentPosition(); //then, save it on the bundle.
-        Log.e("postion on pause", position + "");
+        releasePlayer();
 
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        releasePlayer();
     }
 
     private void initializePlayer() {

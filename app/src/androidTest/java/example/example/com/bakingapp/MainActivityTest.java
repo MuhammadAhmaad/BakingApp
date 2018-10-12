@@ -34,6 +34,8 @@ public class MainActivityTest {
     public void contentTest() {
 
         onView(withId(R.id.main_layout)).check(matches(isDisplayed()));
+        onView(withId(R.id.main_progress_bar)).check(matches(isDisplayed()));
+
     }
 
 }
